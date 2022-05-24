@@ -14884,9 +14884,9 @@ var modal = function modal() {
     close.addEventListener('click', function (e) {
       open.style.display = 'none';
       document.body.style.overflow = '';
-      console.log('open', open, e.target);
-
-      if (e.target.getAttribute(open)) {
+    });
+    open.addEventListener('click', function (e) {
+      if (e.target === open) {
         open.style.display = 'none';
         document.body.style.overflow = '';
       }
